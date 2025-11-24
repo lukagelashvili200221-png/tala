@@ -1,0 +1,408 @@
+/**
+ * Tailwind CSS Utilities for Generated Assets
+ * Add these utilities to your Tailwind config or use as inline styles
+ */
+
+/* Gold Color Palette */
+:root {
+  --color-gold-light: #DAA520;
+  --color-gold-primary: #DAA520;
+  --color-gold-dark: #B8860B;
+  --color-gold-darker: #8B5A0A;
+  --color-amber: #FFC107;
+  --color-yellow: #FFEB3B;
+  --color-success-green: #4CAF50;
+  --color-navy-dark: #0F1932;
+  --color-navy-medium: #141E3C;
+}
+
+/* Background Utility Classes */
+.bg-hero {
+  background-image: url('/assets/hero_gradient_background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.bg-mobile-pattern {
+  background-image: url('/assets/gold_pattern_mobile_background.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-dashboard {
+  background-color: #141E3C;
+  position: relative;
+}
+
+.bg-dashboard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/gold_pattern_mobile_background.png');
+  background-size: cover;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Text Color Classes for Gold Theme */
+.text-gold {
+  color: #DAA520;
+}
+
+.text-gold-light {
+  color: #DAA520;
+}
+
+.text-gold-dark {
+  color: #B8860B;
+}
+
+.text-amber {
+  color: #FFC107;
+}
+
+/* Button Classes with Gold Theme */
+.btn-gold {
+  padding: 0.5rem 1rem;
+  background-color: #DAA520;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #B8860B;
+}
+
+.btn-gold:active {
+  background-color: #8B5A0A;
+}
+
+.btn-gold-outline {
+  padding: 0.5rem 1rem;
+  border: 2px solid #DAA520;
+  color: #DAA520;
+  background-color: transparent;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gold-outline:hover {
+  background-color: #DAA520;
+  color: white;
+}
+
+/* Card with Gold Accent */
+.card-gold {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #DAA520;
+  padding: 1.5rem;
+}
+
+.card-gold-dark {
+  background-color: #111827;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #DAA520;
+  padding: 1.5rem;
+}
+
+/* Success Badge */
+.badge-success {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.badge-gold {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #DAA520;
+  color: white;
+}
+
+/* Gradient Text (Gold) */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #DAA520 0%, #FFC107 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero Section Overlay */
+.hero-overlay {
+  position: relative;
+}
+
+.hero-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15, 25, 50, 0.3);
+  pointer-events: none;
+}
+
+/* Icon Glow Effect */
+.icon-glow {
+  filter: drop-shadow(0 0 8px rgba(218, 165, 32, 0.4));
+}
+
+.icon-glow-lg {
+  filter: drop-shadow(0 0 16px rgba(218, 165, 32, 0.6));
+}
+
+/* Confetti Animation */
+@keyframes confetti-fall {
+  to {
+    transform: translateY(100vh) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-confetti {
+  animation: confetti-fall 3s ease-in forwards;
+}
+
+/* Spinner Animation with Gold Accent */
+.spinner-gold {
+  border: 4px solid rgba(218, 165, 32, 0.1);
+  border-top: 4px solid #DAA520;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success Checkmark Animation */
+@keyframes checkmark-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-checkmark {
+  animation: checkmark-bounce 0.6s ease-in-out;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .bg-hero-responsive {
+    background-image: url('/assets/gold_pattern_mobile_background.png');
+    background-size: cover;
+  }
+}
+
+@media (min-width: 769px) {
+  .bg-hero-responsive {
+    background-image: url('/assets/hero_gradient_background.png');
+    background-size: cover;
+  }
+}
+
+/* Glassmorphism Effect with Gold */
+.glass-gold {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(218, 165, 32, 0.2);
+  border-radius: 0.5rem;
+}
+
+.glass-gold-dark {
+  background: rgba(20, 30, 60, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(218, 165, 32, 0.3);
+  border-radius: 0.5rem;
+}
+
+/* Hover Effects */
+.hover-gold-glow:hover {
+  filter: drop-shadow(0 0 12px rgba(218, 165, 32, 0.5));
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 0 15px rgba(218, 165, 32, 0.3);
+}
+
+/* Loading Skeleton with Gold Shimmer */
+.skeleton-gold {
+  background: linear-gradient(
+    90deg,
+    #f3f4f6 0%,
+    #e5e7eb 50%,
+    #f3f4f6 100%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Divider with Gold Accent */
+.divider-gold {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #DAA520,
+    transparent
+  );
+}
+
+/* Text Shadow Effect */
+.text-shadow-gold {
+  text-shadow: 0 2px 4px rgba(218, 165, 32, 0.3);
+}
+
+.text-shadow-gold-lg {
+  text-shadow: 0 4px 8px rgba(218, 165, 32, 0.4);
+}
+
+/* Border Gradient */
+.border-gradient-gold {
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(135deg, #DAA520, #FFC107);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+}
+
+/* Success Page Background */
+.success-page-bg {
+  background: linear-gradient(135deg, #141E3C 0%, #2a3f5f 100%);
+}
+
+/* Trading Interface Colors */
+.bullish {
+  color: #4CAF50;
+}
+
+.bearish {
+  color: #F44336;
+}
+
+.neutral {
+  color: #DAA520;
+}
+
+/* Responsive Text Sizes */
+.text-responsive {
+  font-size: clamp(1rem, 5vw, 3rem);
+}
+
+.text-responsive-sm {
+  font-size: clamp(0.875rem, 3vw, 1.5rem);
+}
+
+/* Pulse Animation with Gold */
+.pulse-gold {
+  animation: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(218, 165, 32, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(218, 165, 32, 0);
+  }
+}
+
+/* Container Queries (for future use) */
+@supports (container-type: inline-size) {
+  @container (max-width: 400px) {
+    .container-mobile {
+      padding: 1rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  @container (min-width: 400px) {
+    .container-desktop {
+      padding: 2rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+
+  .bg-hero,
+  .bg-mobile-pattern,
+  .bg-dashboard {
+    background-image: none;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .card-auto {
+    background-color: #111827;
+    color: white;
+  }
+
+  .text-auto {
+    color: #f3f4f6;
+  }
+}
+
+/* Accessibility - High Contrast Mode */
+@media (prefers-contrast: more) {
+  .btn-gold {
+    border: 2px solid #DAA520;
+    font-weight: 700;
+  }
+
+  .text-gold {
+    font-weight: 700;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
